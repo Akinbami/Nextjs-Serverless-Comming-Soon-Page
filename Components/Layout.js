@@ -13,14 +13,14 @@ const Layout = props => {
 	return (
         <React.Fragment>
             <Head>
-                <meta charset="utf-8" />
+                <meta charSet="utf-8" />
 
                 <title>Hustle Mobile - Coming Soon</title>
 
                 <meta name="keywords" content="hustlemobile, delivery, coming soon, food delivery, courier, shopping, medical supplies, hustle, hustlers, konga, jumia, jumia food" />
                 <meta name="author" content="Hustle" />
 
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
                 <link rel="icon" type="image/png" sizes="250x250" href="img/logo.png" />
 

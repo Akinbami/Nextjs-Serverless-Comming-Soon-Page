@@ -3,7 +3,10 @@ import Head from 'next/head'
 import Layout from '../Components/Layout';
 import AboutSection from '../Components/Layout';
 import ContactSection from '../Components/ContactSection';
-import PortfolioSection from '../Components/Layout';
+import NotifyPopup from '../Components/NotifyPopup';
+import PortfolioSection from '../Components/PortfolioSection';
+
+
 
 
 
@@ -105,6 +108,8 @@ export default function Home() {
       <PortfolioSection />
 
       <ContactSection />
+
+      <NotifyPopup />
 
 
     </Layout>
