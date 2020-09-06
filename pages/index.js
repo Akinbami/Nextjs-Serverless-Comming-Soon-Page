@@ -2,7 +2,7 @@ import Head from 'next/head'
 // import styles from '../styles/Home.module.css'
 import Layout from '../Components/Layout';
 import AboutSection from '../Components/Layout';
-
+import PortfolioSection from '../Components/Layout';
 
 
 export default function Home() {
@@ -99,6 +99,8 @@ export default function Home() {
       </section>
 
       <AboutSection />
+
+      <PortfolioSection />
 
 
     </Layout>
