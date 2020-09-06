@@ -2,7 +2,9 @@ import Head from 'next/head'
 // import styles from '../styles/Home.module.css'
 import Layout from '../Components/Layout';
 import AboutSection from '../Components/Layout';
+import ContactSection from '../Components/ContactSection';
 import PortfolioSection from '../Components/Layout';
+
 
 
 export default function Home() {
@@ -101,6 +103,8 @@ export default function Home() {
       <AboutSection />
 
       <PortfolioSection />
+
+      <ContactSection />
 
 
     </Layout>
