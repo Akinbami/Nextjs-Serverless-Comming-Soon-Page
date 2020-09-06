@@ -1,6 +1,9 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+// import styles from '../styles/Home.module.css'
 import Layout from '../Components/Layout';
+import AboutSection from '../Components/Layout';
+
+
 
 export default function Home() {
   return (
@@ -94,6 +97,10 @@ export default function Home() {
         <div className="main-section__hover"></div>
 
       </section>
+
+      <AboutSection />
+
+
     </Layout>
   )
 }

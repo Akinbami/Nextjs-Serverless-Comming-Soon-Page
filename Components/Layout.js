@@ -55,6 +55,8 @@ const Layout = props => {
                 <meta name="msapplication-navbutton-color" content="#e51743" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="#e51743" />
 
+                
+
             </Head>
 
             <div className="loader">
@@ -81,8 +83,6 @@ const Layout = props => {
 		<script src="js/libs.min.js"></script>
         <script src="js/gallery-init.js"></script>
         <script src="js/hintio-custom.js"></script>
-        <script src="js/maps/google-map.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAzp2JuNLNAX0b0LL-MinLjicuHJ7czm-w"></script>
 
 		
 		<style jsx global>{`

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import ActiveLink from './NavLink';
 
 const Header = () => (
 	<nav id="menu" className="menu">
