@@ -2,20 +2,20 @@ import Link from 'next/link';
 import ActiveLink from './NavLink';
 
 const Header = () => (
-	<nav id="menu" class="menu">
-        <div class="content-section__controls controls-menu">
-        <div class="color-layer color-layer-dark"></div>
-        <a href="#" id="menu-close" class="section-close menu-close">Close</a>
+	<nav id="menu" className="menu">
+        <div className="content-section__controls controls-menu">
+        <div className="color-layer color-layer-dark"></div>
+        <a href="#" id="menu-close" className="section-close menu-close">Close</a>
         </div>
 
-        <div class="container-fluid p-0 fullheight-mobile">
-        <div class="row no-gutters fullheight-mobile">
+        <div className="container-fluid p-0 fullheight-mobile">
+        <div className="row no-gutters fullheight-mobile">
 
-            <div class="col-12 menu__navigation">
-            <div class="navigation-container">
-                <ul class="navigation">
+            <div className="col-12 menu__navigation">
+            <div className="navigation-container">
+                <ul className="navigation">
                 <li>
-                    <a href="#" id="contact-trigger" class="navigation__item">Contact</a>
+                    <a href="#" id="contact-trigger" className="navigation__item">Contact</a>
                 </li>
                 </ul>
             </div>
@@ -24,7 +24,7 @@ const Header = () => (
         </div>
         </div>
 
-        <div class="menu__hover"></div>
+        <div className="menu__hover"></div>
     </nav>
 );
 
