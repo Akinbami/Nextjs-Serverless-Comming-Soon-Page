@@ -2,6 +2,8 @@ import React,  {useState, useEffect, useContext} from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import Header from './Header';
+
 
 const Layout = props => {
     const [isLoading, setIsLoading] = useState(false);
