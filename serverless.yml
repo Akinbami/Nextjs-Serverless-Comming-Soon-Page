@@ -1,2 +1,2 @@
 comingSoonApp:
- component: serverless-next.js
+ component: "@sls-next/serverless-component"

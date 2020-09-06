@@ -1,0 +1,17 @@
+{
+  "name": "pbbvwnl-gcu2i1m",
+  "hash": "EYgPf/gNNrsxHdC+P9qnY85iwIrQHnPbHq90qT1gosA=",
+  "description": "API Lambda@Edge for Next CloudFront distribution",
+  "memory": 512,
+  "timeout": 10,
+  "code": "/Users/creative/Desktop/dev/nextjs-projects/fadekemi-comming-soon/.serverless_nextjs/api-lambda",
+  "shims": [],
+  "handler": "index.handler",
+  "runtime": "nodejs12.x",
+  "env": {},
+  "role": {
+    "arn": "arn:aws:iam::698428087730:role/pbbvwnl-jomji5q"
+  },
+  "arn": "arn:aws:lambda:us-east-1:698428087730:function:pbbvwnl-gcu2i1m",
+  "region": "us-east-1"
+}

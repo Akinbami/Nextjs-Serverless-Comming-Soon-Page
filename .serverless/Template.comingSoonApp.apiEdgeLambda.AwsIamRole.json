@@ -1,0 +1,12 @@
+{
+  "name": "pbbvwnl-jomji5q",
+  "arn": "arn:aws:iam::698428087730:role/pbbvwnl-jomji5q",
+  "service": [
+    "edgelambda.amazonaws.com",
+    "lambda.amazonaws.com"
+  ],
+  "policy": {
+    "arn": "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+  },
+  "region": "us-east-1"
+}
