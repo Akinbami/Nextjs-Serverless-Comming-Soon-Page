@@ -1,8 +1,9 @@
 import Head from 'next/head'
 // import styles from '../styles/Home.module.css'
 import Layout from '../Components/Layout';
-import AboutSection from '../Components/Layout';
+import AboutSection from '../Components/AboutSection';
 import ContactSection from '../Components/ContactSection';
+import HelloPopup from '../Components/HelloPopup';
 import NotifyPopup from '../Components/NotifyPopup';
 import PortfolioSection from '../Components/PortfolioSection';
 
@@ -110,6 +111,8 @@ export default function Home() {
       <ContactSection />
 
       <NotifyPopup />
+
+      <HelloPopup />
 
 
     </Layout>
