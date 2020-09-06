@@ -57,13 +57,13 @@ const PortfolioSection = () => (
             <div className="media-container">
 
               <div className="gallery">
-                <div className="row no-gutters my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                <div className="row no-gutters my-gallery" itemScope itemType="http://schema.org/ImageGallery">
 
-                  <figure className="col-12 col-sm-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                    <a href="http://via.placeholder.com/900x1200" data-image="http://via.placeholder.com/900x1200" className="works-link" itemprop="contentUrl" data-size="900x1200">
-                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemprop="thumbnail" alt="Image description" />
+                  <figure className="col-12 col-sm-6" itemProp="associatedMedia" itemScope itemType="http://schema.org/ImageObject">
+                    <a href="http://via.placeholder.com/900x1200" data-image="http://via.placeholder.com/900x1200" className="works-link" itemProp="contentUrl" data-size="900x1200">
+                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemProp="thumbnail" alt="Image description" />
                     </a>
-                    <figcaption className="works-description" itemprop="caption description">
+                    <figcaption className="works-description" itemProp="caption description">
                       <div className="works-description__caption">
                         <span>Hustle Mobile</span>
                       </div>
@@ -76,11 +76,11 @@ const PortfolioSection = () => (
                     </figcaption>
                   </figure>
 
-                  <figure className="col-12 col-sm-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                    <a href="http://via.placeholder.com/900x1200" className="works-link" data-image="http://via.placeholder.com/900x1200" itemprop="contentUrl" data-size="900x1200">
-                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemprop="thumbnail" alt="Image description" />
+                  <figure className="col-12 col-sm-6" itemProp="associatedMedia" itemScope itemType="http://schema.org/ImageObject">
+                    <a href="http://via.placeholder.com/900x1200" className="works-link" data-image="http://via.placeholder.com/900x1200" itemProp="contentUrl" data-size="900x1200">
+                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemProp="thumbnail" alt="Image description" />
                     </a>
-                    <figcaption className="works-description" itemprop="caption description">
+                    <figcaption className="works-description" itemProp="caption description">
                       <div className="works-description__caption">
                         <span>Hustlers</span>
                       </div>
@@ -93,23 +93,23 @@ const PortfolioSection = () => (
                     </figcaption>
                   </figure>
 
-                  <figure className="col-12 col-sm-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                    <a href="http://via.placeholder.com/900x1200" className="works-link" data-image="http://via.placeholder.com/900x1200" itemprop="contentUrl" data-size="900x1200">
-                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemprop="thumbnail" alt="Image description" />
+                  <figure className="col-12 col-sm-6" itemProp="associatedMedia" itemScope itemType="http://schema.org/ImageObject">
+                    <a href="http://via.placeholder.com/900x1200" className="works-link" data-image="http://via.placeholder.com/900x1200" itemProp="contentUrl" data-size="900x1200">
+                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemProp="thumbnail" alt="Image description" />
                     </a>
-                    <figcaption className="works-description" itemprop="caption description">
+                    <figcaption className="works-description" itemProp="caption description">
                       <div className="works-description__caption">
                       </div>
 
                     </figcaption>
                   </figure>
 
-                  <figure className="col-12 col-sm-6" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                    <a href="http://via.placeholder.com/900x1200" className="works-link" data-image="http://via.placeholder.com/900x1200" itemprop="contentUrl" data-size="900x1200">
-                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemprop="thumbnail" alt="Image description" />
+                  <figure className="col-12 col-sm-6" itemProp="associatedMedia" itemScope itemType="http://schema.org/ImageObject">
+                    <a href="http://via.placeholder.com/900x1200" className="works-link" data-image="http://via.placeholder.com/900x1200" itemProp="contentUrl" data-size="900x1200">
+                      <img src="http://via.placeholder.com/900x1200" className="works-image" itemProp="thumbnail" alt="Image description" />
                       <div className="overlay"></div>
                     </a>
-                    <figcaption className="works-description" itemprop="caption description">
+                    <figcaption className="works-description" itemProp="caption description">
                       <div className="works-description__caption"></div>
                     </figcaption>
                   </figure>
