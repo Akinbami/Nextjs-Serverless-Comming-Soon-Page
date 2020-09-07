@@ -76,8 +76,8 @@ const Layout = props => {
                     </div>
                     </div>
                     <div className="loader-caption">
-                    <p>Hustle Mobile
-                        <a href="index.html" target="_blank">© 2020</a>
+                    <p>Clear Wellness
+                        <a href="/" target="_blank">© 2020</a>
                     </p>
                     </div>
                 </div>
@@ -89,7 +89,6 @@ const Layout = props => {
 
                 <div className="main-section__header">
                     <div className="logo">
-                        Your Logo Here
                     </div>
 
                     <a href="#0" id="sayhello-trigger" className="sayhello-trigger top-left-mobile top-right-desktop-dist">
@@ -307,6 +306,14 @@ const Layout = props => {
                 .notify-form{
                     max-width: 60rem;
                 }
+
+                .loader__container .loader-content .loader-text span.outline-colored {
+                    color: #4296E2;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-width: 2px;
+                    -webkit-text-stroke-color: #4296E2;
+                }
+                
 
                 .hash-tag{
                     font-size: 2rem;
