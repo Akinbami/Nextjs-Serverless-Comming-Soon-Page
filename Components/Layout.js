@@ -2,6 +2,13 @@ import React,  {useState, useEffect, useContext} from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+import { FiFacebook } from 'react-icons/fi';
+import { FaInstagram } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
+
+
+
+
 import Header from './Header';
 
 
@@ -18,7 +25,7 @@ const Layout = props => {
                 <title>Hustle Mobile - Coming Soon</title>
 
                 <meta name="keywords" content="hustlemobile, delivery, coming soon, food delivery, courier, shopping, medical supplies, hustle, hustlers, konga, jumia, jumia food" />
-                <meta name="author" content="Hustle" />
+                <meta name="author" content="SmartpySolutions" />
 
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -46,6 +53,8 @@ const Layout = props => {
                 <meta property="og:description" content="Hustle Coming Soon Landing Page" />
                 <meta property="og:url" content="index.html" />
                 <meta property="og:image" content="hustlemobile.ng/og-image.html" />
+
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 
                 <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
                 <link rel="stylesheet" type="text/css" href="/css/loaders/loader.css" />
@@ -100,22 +109,32 @@ const Layout = props => {
                         <div className="col-12 col-xl-6 main-section__intro">
 
                             <div className="intro-content">
-                                <div id="headline" className="headline">
-                                    <img src="img/logo.png" alt="Hustle Mobile Coming Soon" />
-                                    <h1>
-                                        <span className="outline-white">Hey Hustlers!</span>
-                                        Can't keep calm.
-                                        <span className="colored">Something New is Coming</span>
-                                        and its mind blowing.
-                                        <span className="outline-white">Special surprise</span>
-                                        for our first 1000 subscribers only.
-                                    </h1>
-                                    <div className="headline__btnholder">
-                                        <a href="#" id="notify-trigger" className="btn">
-                                        <span className="btn-caption">Notify me</span>
-                                        <span className="btn-icon-right btn-custom-icon-right"></span>
-                                        </a>
-                                    </div>
+                                <div id="headline" className="headline text-center">
+                                    <p className="headline-heading mx-auto">
+                                        <span className="outline-white">Signup </span>
+                                         for access to the most exclusive
+                                         <span className="colored"> wellness products</span>
+                                         <span className="outline-white"> and</span> 
+                                         <span className="colored">services!</span>
+                                    </p>
+                                    
+                                    <form className="form notify-form mx-auto form-light">
+                                        <input className="" type="email" placeholder="Enter your email address*" required />
+                                        <button className="btn btn-fill" type="submit">
+                                            <span className="caption">Join Now</span>
+                                        </button>
+                                    </form>
+
+                                    <p className="hash-tag">#ClearMakeitaLifestyle</p>
+
+                                    <p className="share-message mx-auto">For a chance to win from our range of products, share with your friends</p>
+
+                                    <span className="px-2"><FiFacebook size="2em"/></span>
+                                    <span className="px-2"><FaInstagram size="2em"/></span>
+                                    <span className="px-2"><AiOutlineMail size="2em"/></span>
+
+                                    
+                                   
                                 </div>
 
                             </div>
@@ -230,8 +249,66 @@ const Layout = props => {
             <script src="js/hintio-custom.js"></script>
 
             <style jsx>{`
+                .btn-fill{
+                    background: #1C1C1C;
+                }
+
+                .btn-fill:hover {
+                    background: #1C1C1C;
+                }
+
+                .notify-form{
+                    max-width: 60rem;
+                }
+
+                .hash-tag{
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: #fff;
+                    margin-top: 10rem;
+                }
+
+                .headline{
+                    width: 100%;
+                    padding-top: 40%;
+                }
+
+                .headline-heading{
+                    max-width: 60rem;
+                    font-size: 3rem;
+                    font-weight: 700;
+                    color: #fff;
+                    line-height: 2.8rem;
+                    margin-bottom: 4rem
+                }
+
+                
                 .main-section{
                     position: absolute;
+                }
+
+                .main-section__intro{
+                    background: #4296E2;
+                }
+
+                .share-message{
+                    max-width: 50rem;
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-wight: 400;
+                    margin-top: 10rem;
+                    margin-bottom: 5rem;
+                }
+
+                span.outline-white {
+                    color: white;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: white;
+                }
+
+                span.colored {
+                    color: #3377BB;
                 }
             `}
 
