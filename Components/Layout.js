@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import { FiFacebook } from 'react-icons/fi';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaGreaterThan } from 'react-icons/fa';
 import { AiOutlineMail } from 'react-icons/ai';
 
 
@@ -139,14 +139,6 @@ const Layout = props => {
 
                             </div>
 
-                            <div className="explore-button bottom-left">
-                                <a href="#0" id="explore-trigger" className="explore vertical animated">
-                                <span>More</span>
-                                <span>More</span>
-                                <span>More</span>
-                                </a>
-                            </div>
-
                             <div className="socials bottom-right">
                                 <ul>
                                 </ul>
@@ -164,14 +156,15 @@ const Layout = props => {
 
                                 <div className="media-countdown">
                                     <div className="countdown-caption">
-                                        <span className="help-text">Just a little more
-                                        <br />
-                                        it's just
-                                        </span>
+                                        <p className="countdown-caption-top">CLEAR<br /><span className="text-muted">wellness</span></p>
                                     </div>
+                                    <div>
+                                        <p className="countdown-caption-center">Health isn’t a goal, its a way of living</p>
+                                    </div>
+
+                                    
                                     <div className="countdown countdown-days">
-                                        <div id="countdown"></div>
-                                        <span className="help-text">Left to our launch</span>
+                                        <span className="help-text">Become a Clear Client <FaGreaterThan size="1em" /></span>
                                     </div>
                                 </div>
 
@@ -257,6 +250,60 @@ const Layout = props => {
                     background: #1C1C1C;
                 }
 
+                .countdown-caption{
+                    width: 100%;
+                }
+
+                .countdown-caption-top{
+                    position: absolute;
+                    width: 197px;
+                    height: 96px;
+                    left: 55px;
+                    top: 51px;
+
+                    font-family: Maison Neue Extended;
+                    font-style: normal;
+                    font-weight: 800;
+                    font-size: 4rem;
+                    line-height: 4rem;
+
+                    color: #3377BB;
+                }
+
+                .countdown-caption-center{
+                    position: absolute;
+                    width: 465px;
+                    height: 120px;
+                    left: 110px;
+                    top: 390px;
+
+                    font-family: Manrope;
+                    font-style: normal;
+                    font-weight: 1;
+                    font-size: 52px;
+                    line-height: 60px;
+
+                    color: #4296E2;
+
+                }
+
+                .countdown-caption-bottom{
+                    position: absolute;
+                    width: 321px;
+                    height: 38px;
+                    left: 110px;
+                    top: 799px;
+
+                    font-family: Manrope;
+                    font-style: normal;
+                    font-weight: 1;
+                    font-size: 28px;
+                    line-height: 38px;
+                    text-align: center;
+
+                    color: #fff;
+                }
+
                 .notify-form{
                     max-width: 60rem;
                 }
@@ -270,7 +317,7 @@ const Layout = props => {
 
                 .headline{
                     width: 100%;
-                    padding-top: 40%;
+                    padding-top: 30%;
                 }
 
                 .headline-heading{
@@ -278,7 +325,7 @@ const Layout = props => {
                     font-size: 3rem;
                     font-weight: 700;
                     color: #fff;
-                    line-height: 2.8rem;
+                    line-height: 3rem;
                     margin-bottom: 4rem
                 }
 
@@ -309,6 +356,43 @@ const Layout = props => {
 
                 span.colored {
                     color: #3377BB;
+                }
+
+                .text-muted{
+                    font-size: 3rem;
+                }
+
+                @media (max-width: 414px) {
+                    .countdown-caption-top{
+                        position: absolute;
+                        width: 100%;
+                        left: 2rem;
+                        top: 2.5rem;
+
+                        font-family: Maison Neue Extended;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 3rem;
+                        line-height: 3rem;
+
+                        color: #3377BB;
+                    }
+
+                    .countdown-caption-center{
+                        position: absolute;
+                        width: 100%;
+                        left: 2rem;
+                        top: 25rem;
+
+                        font-family: Manrope;
+                        font-style: normal;
+                        font-weight: 1;
+                        font-size: 3rem;
+                        line-height: 3rem;
+
+                        color: #4296E2;
+
+                    }
                 }
             `}
 
