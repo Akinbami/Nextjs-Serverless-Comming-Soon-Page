@@ -15,14 +15,12 @@ const NotifyPopup = () => (
         </div>
 
         <div className="popup__content">
-
           <div className="content-block popup-title">
-            <p className="popup-title__title">Lets us <span className="outline-white">inform you</span> about our launch</p>
-            <p className="popup-title__text">Subscribe to our newsletter and we will send you a notification about the launch of new mobile app.</p>
+            <p className="popup-title__title">Signup for access to the most<br /> exclusive wellness products and services!</p>
           </div>
 
           <div className="content-block">
-            <div className="form-container">
+            <div className="form-container text-center">
 
               <div className="reply-group subscription-ok">
                 <i className="far fa-check-circle reply-group__icon"></i>
@@ -35,12 +33,9 @@ const NotifyPopup = () => (
                 <span className="reply-group__text">Something went wrong. Please try again.</span>
               </div>
 
-              <form className="form notify-form form-light">
-                <input className="" type="email" placeholder="Enter your email address*" required />
-                <span className="inputs-description">*Required fields</span>
-                <button className="btn btn-fill" type="submit">
-                  <span className="caption">Send</span>
-                </button>
+              <form className="form notify-form form-inline mx-auto">
+                  <input type="email" id="email" placeholder="Enter your email" name="email" required />
+                  <button type="submit"><span className="caption">Join Now</span></button>
               </form>
 
             </div>
@@ -49,6 +44,32 @@ const NotifyPopup = () => (
         </div>
 
       </div>
+      <style jsx>{`
+
+        .popup-title__title {
+          font: normal 500 2.4rem/1 "Montserrat", sans-serif;
+          text-transform: none;
+          color: white;
+          text-align: center;
+        }
+
+        .section-caption{
+          color: #4296E2;
+          -webkit-text-stroke-color: #4296E2;
+        }
+        .reply-group {
+          position: absolute;
+          top: -2rem;
+          left: 13rem;
+        }
+
+        .reply-group__icon{
+          color: #4296E2;
+        }
+
+      `
+      }
+      </style>
 
     </div>
 );

@@ -54,7 +54,7 @@ const Layout = props => {
                 <meta property="og:url" content="index.html" />
                 <meta property="og:image" content="hustlemobile.ng/og-image.html" />
 
-                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous" />
 
                 <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
                 <link rel="stylesheet" type="text/css" href="/css/loaders/loader.css" />
@@ -87,55 +87,30 @@ const Layout = props => {
 
             <section id="main" className="main-section">
 
-                <div className="main-section__header">
-                    <div className="logo">
-                    </div>
-
-                    <a href="#0" id="sayhello-trigger" className="sayhello-trigger top-left-mobile top-right-desktop-dist">
-                        <i className="far fa-envelope"></i>
-                        <span className="caption">Notify me</span>
-                    </a>
-
-                    <div className="menu-button top-right">
-                        <a href="#0" id="menu-trigger" className="menu-trigger"><span></span></a>
-                    </div>
-
-                </div>
-
                 <div className="container-fluid p-0 fullheight">
                     <div className="row no-gutters flex-xl-row-reverse fullheight">
 
                         <div className="col-12 col-xl-6 main-section__intro">
-
-                            <div className="intro-content">
-                                <div id="headline" className="headline text-center">
-                                    <p className="headline-heading mx-auto">
-                                        <span className="outline-white">Signup </span>
-                                         for access to the most exclusive
-                                         <span className="colored"> wellness products</span>
-                                         <span className="outline-white"> and</span> 
-                                         <span className="colored">services!</span>
-                                    </p>
-                                    
-                                    <form className="form notify-form mx-auto form-light">
-                                        <input className="" type="email" placeholder="Enter your email address*" required />
-                                        <button className="btn btn-fill" type="submit">
-                                            <span className="caption">Join Now</span>
-                                        </button>
+                            <div className="intro-content text-center">
+                                <p className="headline-heading">
+                                    Signup for access to the most<br /> exclusive wellness products and services!
+                                </p>
+                                <div className="signup-form">
+                                    <form className="form-inline mx-auto">
+                                        <input type="email" id="email" placeholder="Enter your email" name="email" />
+                                        <button type="submit">Join Now</button>
                                     </form>
-
-                                    <p className="hash-tag">#ClearMakeitaLifestyle</p>
-
-                                    <p className="share-message mx-auto">For a chance to win from our range of products, share with your friends</p>
-
-                                    <span className="px-2"><FiFacebook size="2em"/></span>
-                                    <span className="px-2"><FaInstagram size="2em"/></span>
-                                    <span className="px-2"><AiOutlineMail size="2em"/></span>
-
-                                    
-                                   
                                 </div>
+                                
 
+                                <p className="hash-tag">#ClearMakeitaLifestyle</p>
+
+                                <p className="share-message mx-auto">For a chance to win from our range of products, share with your friends</p>
+                                <p className="text-light">
+                                    <span className="px-2"><FiFacebook size="1.5em"/></span>
+                                    <span className="px-2"><FaInstagram size="1.5em"/></span>
+                                    <span className="px-2"><AiOutlineMail size="1.5em"/></span>
+                                </p>
                             </div>
 
                             <div className="socials bottom-right">
@@ -148,7 +123,6 @@ const Layout = props => {
                         <div className="col-12 col-xl-6 main-section__media">
                             <div className="media-content">
 
-                                <div className="media-image media-image-3"></div>
                                 <div id="stars-js"></div>
 
                                 <div className="color-layer color-layer-dark"></div>
@@ -161,10 +135,13 @@ const Layout = props => {
                                         <p className="countdown-caption-center">Health isn’t a goal, its a way of living</p>
                                     </div>
 
-                                    
-                                    <div className="countdown countdown-days">
-                                        <span className="help-text">Become a Clear Client <FaGreaterThan size="1em" /></span>
+                                    <div className="headline__btnholder">
+                                        <a href="#" id="notify-trigger" className="btn">
+                                            <span className="btn-caption ">Become a Clear Client <FaGreaterThan size="1em" /></span>
+                                            <span className="btn-icon-right btn-custom-icon-right"></span>
+                                        </a>
                                     </div>
+                                    
                                 </div>
 
                             </div>
@@ -240,7 +217,13 @@ const Layout = props => {
             <script src="js/gallery-init.js"></script>
             <script src="js/hintio-custom.js"></script>
 
-            <style jsx>{`
+            <style jsx global>{`
+
+                .btn-caption{
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                }
+
                 .btn-fill{
                     background: #1C1C1C;
                 }
@@ -303,6 +286,67 @@ const Layout = props => {
                     color: #fff;
                 }
 
+                .headline__btnholder{
+                    position: absolute;
+                    width: 321px;
+                    height: 38px;
+                    left: 110px;
+                    top: 88rem;
+                }
+
+                .form-inline {
+                    display: flex !important;
+                    flex-flow: row wrap;
+                    align-items: center;
+                    max-width: 55rem;
+                }
+
+                .form-inline label {
+                    margin: 5px 10px 5px 0;
+                }
+
+                .form-inline input {
+                    vertical-align: middle;
+                    margin: 5px 10px 5px 0;
+                    padding: 10px;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    max-width: 40rem;
+                    height: 5.5rem;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    border-radius: .5rem;
+                }
+
+                .form-inline button {
+                    padding: 10px 20px;
+                    background-color: black;
+                    border: 1px solid #ddd;
+                    color: white;
+                    height: 5.5rem;
+                    font-size: 2rem;
+                    border-radius: .5rem;
+                }
+
+                .form-inline button:hover {
+                    background-color: black;
+                }
+
+                .signup-form{
+                    padding-top: 5rem;
+                }
+
+                @media (max-width: 800px) {
+                    .form-inline input {
+                        margin: 10px 0;
+                    }
+
+                    .form-inline {
+                        flex-direction: column;
+                        align-items: stretch;
+                    }
+                }
+
                 .notify-form{
                     max-width: 60rem;
                 }
@@ -328,12 +372,37 @@ const Layout = props => {
                 }
 
                 .headline-heading{
-                    max-width: 60rem;
-                    font-size: 3rem;
-                    font-weight: 700;
-                    color: #fff;
-                    line-height: 3rem;
-                    margin-bottom: 4rem
+                    position: relative;
+                    width: 100%;
+                    height: 66px;
+
+                    font-family: Manrope;
+                    font-style: normal;
+                    font-weight: 1;
+                    font-size: 24px;
+                    line-height: 33px;
+                    text-align: center;
+
+                    margin-top: 28rem;
+
+                    /* WHITE */
+
+                    color: #FFFFFF;
+                }
+
+                .help-text{
+                    position: relative;
+                    height: 38px;
+                    left: 110px;
+                    top: 0rem;
+
+                    font-family: Manrope;
+                    font-style: normal;
+                    font-weight: 1;
+                    font-size: 2rem;
+                    text-align: center;
+
+                    color: #656565;
                 }
 
                 
@@ -342,14 +411,23 @@ const Layout = props => {
                 }
 
                 .main-section__intro{
-                    background: #4296E2;
+                    background-image: url("/img/commingsoon.png");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                            background-size: cover;
+                }
+
+                .media-countdown {
+                    background: #fff;
                 }
 
                 .share-message{
                     max-width: 50rem;
                     color: #fff;
-                    font-size: 1.5rem;
-                    font-wight: 400;
+                    font-size: 2rem;
+                    font-weight: 500;
                     margin-top: 10rem;
                     margin-bottom: 5rem;
                 }
@@ -373,14 +451,15 @@ const Layout = props => {
                     .countdown-caption-top{
                         position: absolute;
                         width: 100%;
-                        left: 2rem;
-                        top: 2.5rem;
+                        height: 5rem;
+                        left: .5rem;
+                        top: .5rem;
 
                         font-family: Maison Neue Extended;
                         font-style: normal;
                         font-weight: 700;
-                        font-size: 3rem;
-                        line-height: 3rem;
+                        font-size: 2.5rem;
+                        line-height: 2.5rem;
 
                         color: #3377BB;
                     }
@@ -389,16 +468,56 @@ const Layout = props => {
                         position: absolute;
                         width: 100%;
                         left: 2rem;
-                        top: 25rem;
+                        top: 20rem;
 
                         font-family: Manrope;
                         font-style: normal;
                         font-weight: 1;
-                        font-size: 3rem;
-                        line-height: 3rem;
+                        font-size: 4rem;
+                        line-height: 4rem;
 
                         color: #4296E2;
 
+                    }
+
+                    .countdown-caption-bottom{
+                        position: absolute;
+                        width: 321px;
+                        height: 38px;
+                        left: 110px;
+                        top: 20rem;
+
+                        font-family: Manrope;
+                        font-style: normal;
+                        font-weight: 1;
+                        font-size: 28px;
+                        line-height: 38px;
+                        text-align: center;
+
+                        color: #fff;
+                    }
+
+                    .headline-heading{
+                        margin-top: 20rem;
+                    }
+
+                    .headline__btnholder{
+                        position: absolute;
+                        width: 321px;
+                        height: 38px;
+                        left: 2rem;
+                        top: 50rem;
+                    }
+
+                    .intro-content{
+                        padding-left: 1rem !important;
+                        padding-right: 1rem !important;
+                        padding-top: 0rem !important;
+
+                    }
+
+                    .text-muted{
+                        font-size: 2.5rem;
                     }
                 }
             `}

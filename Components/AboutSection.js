@@ -27,7 +27,7 @@ const AboutSection = () => (
               </div>
 
               <div className="content-block">
-                     <div className="show-skillbar">
+                <div className="show-skillbar">
                   <div className="skillbar" data-percent="84">
                     <span className="skillbar-title">Android</span>
                     <p className="skillbar-bar"></p>
