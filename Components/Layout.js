@@ -15,16 +15,14 @@ import Header from './Header';
 const Layout = props => {
     const [isLoading, setIsLoading] = useState(false);
     
-	
-      
 	return (
         <React.Fragment>
             <Head>
                 <meta charSet="utf-8" />
 
-                <title>Hustle Mobile - Coming Soon</title>
+                <title>Clear Client - Coming Soon</title>
 
-                <meta name="keywords" content="hustlemobile, delivery, coming soon, food delivery, courier, shopping, medical supplies, hustle, hustlers, konga, jumia, jumia food" />
+                <meta name="keywords" content="Clear Client, Clear, Client" />
                 <meta name="author" content="SmartpySolutions" />
 
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -32,27 +30,17 @@ const Layout = props => {
                 <link rel="icon" type="image/png" sizes="250x250" href="img/logo.png" />
 
                 <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="/img/favicon/favicon.ico" type="image/x-icon" />
-                <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-touch-icon-57x57.png" />
-                <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-touch-icon-60x60.png" />
-                <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-touch-icon-72x72.png" />
-                <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-touch-icon-76x76.png" />
-                <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-touch-icon-114x114.png" />
-                <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-touch-icon-120x120.png" />
-                <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-touch-icon-144x144.png" />
-                <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-touch-icon-152x152.png" />
-                <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon-180x180.png" />
-                <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-chrome-192x192.png" />
-                <link rel="manifest" href="/img/favicon/site.html" />
+                
                 <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.html" color="#25237e" />
                 <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
-                <meta name="msapplication-TileColor" content="#e51743" />
+                <meta name="msapplication-TileColor" content="#4296E2" />
 
                 <meta property="og:image:height" content="300" />
                 <meta property="og:image:width" content="573" />
-                <meta property="og:title" content="Hustle Coming Soon Landing Page" />
-                <meta property="og:description" content="Hustle Coming Soon Landing Page" />
+                <meta property="og:title" content="Clear Client Coming Soon Landing Page" />
+                <meta property="og:description" content="Clear Client Coming Soon Landing Page" />
                 <meta property="og:url" content="index.html" />
-                <meta property="og:image" content="hustlemobile.ng/og-image.html" />
+                <meta property="og:image" content="" />
 
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossOrigin="anonymous" />
 
@@ -60,9 +48,9 @@ const Layout = props => {
                 <link rel="stylesheet" type="text/css" href="/css/loaders/loader.css" />
                 <link rel="stylesheet" type="text/css" href="/css/main.css" />
 
-                <meta name="theme-color" content="#e51743" />
-                <meta name="msapplication-navbutton-color" content="#e51743" />
-                <meta name="apple-mobile-web-app-status-bar-style" content="#e51743" />
+                <meta name="theme-color" content="#4296E2" />
+                <meta name="msapplication-navbutton-color" content="#4296E2" />
+                <meta name="apple-mobile-web-app-status-bar-style" content="#4296E2" />
 
                 
 
