@@ -149,6 +149,28 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="footer text-center">
+        <p className="headline-heading">
+          Signup for access to the most<br /> exclusive wellness products and services!
+                                </p>
+        <div className="signup-form">
+          <form className="form-inline mx-auto">
+            <input type="email" id="email" placeholder="Enter your email" name="email" />
+            <button type="submit">Join Now</button>
+          </form>
+        </div>
+
+
+        <p className="hash-tag">#ClearMakeitaLifestyle</p>
+
+        <p className="share-message mx-auto">For a chance to win from our range of products, share with your friends</p>
+        <p className="text-light">
+          <span className="px-2"><FiFacebook size="1.5em" /></span>
+          <span className="px-2"><FaInstagram size="1.5em" /></span>
+          <span className="px-2"><AiOutlineMail size="1.5em" /></span>
+        </p>
+      </div>
+
       <style jsx>{`
           .bg-primary {
               background-color: #5da4e0!important;
@@ -194,6 +216,16 @@ export default function Home() {
             padding-right: 18%;
             padding-top: 5%;
             padding-bottom: 5%;
+          }
+
+          .footer{
+            background-image: url("/img/footer-bg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            -webkit-background-size: cover;
+                -moz-background-size: cover;
+                    background-size: cover;
+                
           }
           
 
