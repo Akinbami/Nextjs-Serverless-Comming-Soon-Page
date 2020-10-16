@@ -1,10 +1,10 @@
 {
   "name": "pbbvwnl-ltxaqj",
-  "hash": "mc9GK/lzmYoGVEbIrEHp9nYF+RMhkMaHfaH7ChlIzW4=",
+  "hash": "1oyeoDpGxLFu8QUEU3xyMC8GwT0sQOQeiPER5+b3SvM=",
   "description": "Default Lambda@Edge for Next CloudFront distribution",
   "memory": 512,
   "timeout": 10,
-  "code": "/Users/creative/Desktop/dev/nextjs-projects/fadekemi-comming-soon/.serverless_nextjs/default-lambda",
+  "code": "/Users/creative/Desktop/dev/Nextjs-Serverless-Comming-Soon-Page/.serverless_nextjs/default-lambda",
   "shims": [],
   "handler": "index.handler",
   "runtime": "nodejs12.x",

@@ -47,6 +47,9 @@ const Layout = props => {
                 <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
                 <link rel="stylesheet" type="text/css" href="/css/loaders/loader.css" />
                 <link rel="stylesheet" type="text/css" href="/css/main.css" />
+                <script src="/particles.js-master/particles.js"></script>
+
+
 
                 <meta name="theme-color" content="#4296E2" />
                 <meta name="msapplication-navbutton-color" content="#4296E2" />
@@ -76,7 +79,30 @@ const Layout = props => {
             <section id="main" className="main-section">
 
                 <div className="container-fluid p-0 fullheight">
-                    <div className="row no-gutters flex-xl-row-reverse fullheight">
+                    <div className="row no-gutters fullheight">
+
+                        <div className="col-12 col-xl-6 main-section__media">
+                            <div className="media-content">
+
+                                <div className="color-layer color-layer-dark"></div>
+
+                                <div className="media-countdown">
+                                    <div id="particles-js"></div>
+
+                                    <p className="countdown-caption-top">CLEAR<br /><span className="text-muted">wellness</span></p>
+                                    <p className="countdown-caption-center">Health isn’t a goal, its a way of living</p>
+
+                                    <div className="headline__btnholder">
+                                        <a href="#" id="notify-trigger" className="btn">
+                                            <span className="btn-caption ">Become a Clear Client <FaGreaterThan size="1em" /></span>
+                                            <span className="btn-icon-right btn-custom-icon-right"></span>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
 
                         <div className="col-12 col-xl-6 main-section__intro">
                             <div className="intro-content text-center">
@@ -108,32 +134,6 @@ const Layout = props => {
 
                         </div>
 
-                        <div className="col-12 col-xl-6 main-section__media">
-                            <div className="media-content">
-
-                                <div id="stars-js"></div>
-
-                                <div className="color-layer color-layer-dark"></div>
-
-                                <div className="media-countdown">
-                                    <div className="countdown-caption">
-                                        <p className="countdown-caption-top">CLEAR<br /><span className="text-muted">wellness</span></p>
-                                    </div>
-                                    <div>
-                                        <p className="countdown-caption-center">Health isn’t a goal, its a way of living</p>
-                                    </div>
-
-                                    <div className="headline__btnholder">
-                                        <a href="#" id="notify-trigger" className="btn">
-                                            <span className="btn-caption ">Become a Clear Client <FaGreaterThan size="1em" /></span>
-                                            <span className="btn-icon-right btn-custom-icon-right"></span>
-                                        </a>
-                                    </div>
-                                    
-                                </div>
-
-                            </div>
-                        </div>
 
                     </div>
                 </div>
@@ -204,8 +204,28 @@ const Layout = props => {
             <script src="js/libs.min.js"></script>
             <script src="js/gallery-init.js"></script>
             <script src="js/hintio-custom.js"></script>
+            <script src="/js/particles.js"></script>
+
+            
 
             <style jsx global>{`
+                canvas {
+                    display: block;
+                    vertical-align: bottom;
+                }
+
+                    /* ---- particles.js container ---- */
+
+                #particles-js {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ffffff;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                }
+
 
                 .btn-caption{
                     font-size: 1.5rem;
@@ -219,40 +239,37 @@ const Layout = props => {
                 .btn-fill:hover {
                     background: #1C1C1C;
                 }
+                
 
                 .countdown-caption{
                     width: 100%;
                 }
 
                 .countdown-caption-top{
-                    position: absolute;
+                    position: relative;
                     width: 197px;
                     height: 96px;
-                    left: 55px;
-                    top: 51px;
-
                     font-family: Maison Neue Extended;
                     font-style: normal;
                     font-weight: 800;
                     font-size: 4rem;
                     line-height: 4rem;
-
+                    padding-top: 3rem;
+                    padding-left: 2rem;
                     color: #3377BB;
                 }
 
                 .countdown-caption-center{
-                    position: absolute;
-                    width: 465px;
-                    height: 120px;
-                    left: 110px;
-                    top: 390px;
-
+                    position: relative;
+                    width: 100%;
                     font-family: Manrope;
                     font-style: normal;
                     font-weight: 1;
                     font-size: 52px;
                     line-height: 60px;
-
+                    padding-top: 40%;
+                    padding-left: 10%;
+                    padding-right: 10%;
                     color: #4296E2;
 
                 }
@@ -275,11 +292,11 @@ const Layout = props => {
                 }
 
                 .headline__btnholder{
-                    position: absolute;
-                    width: 321px;
-                    height: 38px;
-                    left: 110px;
-                    top: 88rem;
+                    position: relative;
+                    margin-top: 0;
+                    padding-top: 42%;
+                    padding-left: 5%;
+                    width: 100%;
                 }
 
                 .form-inline {
@@ -319,6 +336,7 @@ const Layout = props => {
                 .form-inline button:hover {
                     background-color: black;
                 }
+
 
                 .signup-form{
                     padding-top: 5rem;
@@ -436,34 +454,35 @@ const Layout = props => {
                 }
 
                 @media (max-width: 414px) {
+                    .btn-caption{
+                        font-size: 1.2rem;
+                        font-weight: 500;
+                    }
+
                     .countdown-caption-top{
-                        position: absolute;
+                        position: relative;
                         width: 100%;
                         height: 5rem;
-                        left: .5rem;
-                        top: .5rem;
-
                         font-family: Maison Neue Extended;
                         font-style: normal;
                         font-weight: 700;
                         font-size: 2.5rem;
                         line-height: 2.5rem;
-
+                        padding: 1.8rem;
                         color: #3377BB;
                     }
 
                     .countdown-caption-center{
-                        position: absolute;
+                        position: relative;
                         width: 100%;
-                        left: 2rem;
-                        top: 20rem;
-
                         font-family: Manrope;
                         font-style: normal;
                         font-weight: 1;
                         font-size: 4rem;
                         line-height: 4rem;
-
+                        padding-top: 60%;
+                        padding-left: 5%;
+                        padding-right: 5%;
                         color: #4296E2;
 
                     }
@@ -490,11 +509,8 @@ const Layout = props => {
                     }
 
                     .headline__btnholder{
-                        position: absolute;
-                        width: 321px;
-                        height: 38px;
-                        left: 2rem;
-                        top: 50rem;
+                        margin-top: 0;
+                        padding: 45% 2%;
                     }
 
                     .intro-content{
@@ -504,8 +520,43 @@ const Layout = props => {
 
                     }
 
+                    .main-section__media{
+                        height: 62rem;
+                    }
+
                     .text-muted{
                         font-size: 2.5rem;
+                    }
+                }
+
+                @media (max-width: 360px) {
+                    .headline__btnholder{
+                        margin-top: 0;
+                        padding-top: 60%;
+                        padding-left: 2%;
+                        padding-right: 2%;
+                    }
+                }
+
+                @media (max-width: 320px) {
+                    .countdown-caption-center {
+                        font-size: 2.3rem;
+                        line-height: 2.3rem;
+                        padding-top: 50%;
+                        padding-left: 5%;
+                        padding-right: 5%;
+                        color: #4296E2;
+                    }
+
+                    .headline__btnholder{
+                        margin-top: 0;
+                        padding-top: 50%;
+                        padding-left: 2%;
+                        padding-right: 2%;
+                    }
+
+                    .main-section__media {
+                        height: 20rem;
                     }
                 }
             `}
