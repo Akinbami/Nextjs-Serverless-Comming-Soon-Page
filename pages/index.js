@@ -3,18 +3,25 @@ import Layout from '../Components/Layout';
 import Management from '../Components/Management';
 
 
+import { FiFacebook } from 'react-icons/fi';
+import { FaInstagram, FaGreaterThan } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
+
+import {Element } from 'react-scroll';
+
+
+
 
 
 
 export default function Home() {
   return (
     <Layout>
-      <div className="position-relative overflow-hidden p-3 p-md-5 text-center bg-primary">
+      <div className="banner position-relative overflow-hidden p-3 p-md-5 text-center bg-primary">
+        <div id="particles-js"></div>
         <div className="col-md-5 p-lg-5 mx-auto my-5">
           <h1 className="display-4 font-weight-normal text-light">Health isn’t a goal, its a way of living</h1>
         </div>
-        <div className="product-device shadow-sm d-none d-md-block"></div>
-        <div className="product-device product-device-2 shadow-sm d-none d-md-block"></div>
       </div>
 
       <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
@@ -50,32 +57,36 @@ export default function Home() {
       <div className="brand-text px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <p className="lead mx-auto">We created to flavoured options for those who want to consume their recommended water intake but don't like to drink water. </p>
       </div>
-      <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 className="display-4">Water in a box?</h1>
-        <p className="lead">Yes! No more plastic water bottles. Our package are made from 
-                            100% recyclable and +68% renewable materials. </p>
-      </div>
 
-      <div className="section-why text-center py-3">
-        <div className="image">
-          <img className="img-fluid" src="/img/bigproduct.png" alt="..." />
+        <div className="pricing-header px-3 pt-md-5 mx-auto text-center  section-why-overflow">
+          <h1 className="display-4">Water in a box?</h1>
+          <p className="lead">Yes! No more plastic water bottles. Our package are made from 
+                              100% recyclable and +68% renewable materials. </p>
         </div>
-        <div className="row">
-          <div className="col-lg-4">
-            <img src="/icons/icon1.png" className="rounded" alt="..." />
-            <p className="section-why-text py-2">Better for you.</p>
+
+        
+      <Element name="community" className="element">
+        <div className="section-why text-center">
+          <div className="image">
+            <img className="img-fluid" src="/img/bigproduct.png" alt="..." />
           </div>
-          <div className="col-lg-4">
-            <img src="/icons/icon2.png" className="rounded" alt="..." />
-            <p className="section-why-text py-2">Eco-friendly packaging</p>
-          </div>
-          <div className="col-lg-4">
-            <img src="/icons/icon3.png" className="rounded" alt="..." />
-            <p className="section-why-text py-2">Clear Community</p>
-          </div>
-       </div>
-        <h3 className="h1">Make it a Lifestyle</h3>
-      </div>
+          <div className="row">
+            <div className="col-lg-4">
+              <img src="/icons/icon1.png" className="rounded" alt="..." />
+              <p className="section-why-text py-2">Better for you.</p>
+            </div>
+            <div className="col-lg-4">
+              <img src="/icons/icon2.png" className="rounded" alt="..." />
+              <p className="section-why-text py-2">Eco-friendly packaging</p>
+            </div>
+            <div className="col-lg-4">
+              <img src="/icons/icon3.png" className="rounded" alt="..." />
+              <p className="section-why-text py-2">Clear Community</p>
+            </div>
+        </div>
+          <h3 className="h2">Make it a Lifestyle</h3>
+        </div>
+      </Element>
 
       <div className="community text-left">
         <div className="community-item">
@@ -110,17 +121,19 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="section-why text-center py-5">
-        <h3 className="h1 py-2">Why Clear</h3>
-        <div className="container">
-          <p className="community-text">
-            Not all Waters are equal</p>
-          <p className="community-text">  We are told our body is made up of 60% water. The water you consume is more important than the food you eat, the amount of the sleep you get and and the exercise you do, we agree it all matters, however,  water is fundamental to wellness.
-            Drinking clear, fresh, naturally alkaline artesian water is amazing for you. So is lessening our environmental impact. Clear’s mission is to do both at the same time.
-            We are the best choice.
-          </p>
+      <Element name="why" className="element">
+        <div className="section-why text-center py-5">
+          <h3 className="h1 py-2">Why Clear</h3>
+          <div className="container">
+            <p className="community-text">
+              Not all Waters are equal</p>
+            <p className="community-text">  We are told our body is made up of 60% water. The water you consume is more important than the food you eat, the amount of the sleep you get and and the exercise you do, we agree it all matters, however,  water is fundamental to wellness.
+              Drinking clear, fresh, naturally alkaline artesian water is amazing for you. So is lessening our environmental impact. Clear’s mission is to do both at the same time.
+              We are the best choice.
+            </p>
+          </div>
         </div>
-      </div>
+      </Element>
 
       <div className="founder">
         <div className="row">
@@ -142,36 +155,56 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="section-why text-center py-5">
-        <h3 className="h1 py-2">Management Team and<br />Board of Advisors</h3>
-        <div className="container">
-          <Management />
+      <Element name="team" className="element">
+        <div className="section-why text-center py-5">
+          <h3 className="h1 py-2">Management Team and<br />Board of Advisors</h3>
+          <div className="container">
+            <Management />
+          </div>
         </div>
-      </div>
+      </Element>
+      <Element name="connect" className="element">
+        <div className="footer text-center">
+          <p className="community-header text-light">
+            Signup for access to the most<br /> exclusive wellness products and services!
+          </p>
+          <div className="signup-form">
+            <form className="form-row">
+              <div className="col-sm-12 col-md-8 col-lg-9 mb-2">
+                <label for="email" className="sr-only">Email</label>
+                <input type="email" className="form-control form-control-lg" id="email" placeholder="Enter your email" />
+              </div>
+              <div className="col-sm-12 col-md-4 col-lg-3 mb-2">
+                <button type="submit" className="btn btn-dark btn-lg w-100">Join Now</button>
+              </div>
+            </form>
+          </div>
 
-      <div className="footer text-center">
-        <p className="headline-heading">
-          Signup for access to the most<br /> exclusive wellness products and services!
-                                </p>
-        <div className="signup-form">
-          <form className="form-inline mx-auto">
-            <input type="email" id="email" placeholder="Enter your email" name="email" />
-            <button type="submit">Join Now</button>
-          </form>
+
+          <p className="h3 py-5 text-light">#ClearMakeitaLifestyle</p>
+
+          <p className="py-3 text-light">
+            <span className="px-2"><FiFacebook size="2em" /></span>
+            <span className="px-2"><FaInstagram size="2em" /></span>
+            <span className="px-2"><AiOutlineMail size="2em" /></span>
+          </p>
+
+          <p className="h5 text-light mx-auto">© Clear Wellness. All Rights Reserved.</p>
         </div>
-
-
-        <p className="hash-tag">#ClearMakeitaLifestyle</p>
-
-        <p className="share-message mx-auto">For a chance to win from our range of products, share with your friends</p>
-        <p className="text-light">
-          <span className="px-2"><FiFacebook size="1.5em" /></span>
-          <span className="px-2"><FaInstagram size="1.5em" /></span>
-          <span className="px-2"><AiOutlineMail size="1.5em" /></span>
-        </p>
-      </div>
+      </Element>
 
       <style jsx>{`
+          .banner{
+            background-image: url("/img/footer-bg.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            -webkit-background-size: cover;
+                -moz-background-size: cover;
+                    background-size: cover;
+            padding-top: 10% !important;
+            padding-bottom: 10% !important;
+          }
+
           .bg-primary {
               background-color: #5da4e0!important;
           }
@@ -181,6 +214,21 @@ export default function Home() {
             max-width: 50rem;
             font-weight: 500;
             font-size: 20px;
+          }
+
+          canvas {
+            display: block;
+            vertical-align: bottom;
+          }
+
+
+          #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
           }
 
           .community{
@@ -219,6 +267,10 @@ export default function Home() {
           }
 
           .footer{
+            padding-left: 18%;
+            padding-right: 18%;
+            padding-top: 5%;
+            padding-bottom: 2%;
             background-image: url("/img/footer-bg.png");
             background-repeat: no-repeat;
             background-position: center;
@@ -226,6 +278,11 @@ export default function Home() {
                 -moz-background-size: cover;
                     background-size: cover;
                 
+          }
+
+          .image{
+            position: relative;
+            margin-top: -650px;
           }
           
 
@@ -235,6 +292,12 @@ export default function Home() {
 
           .section-why{
             background-color: #F0F9FF;
+            padding-top: 20rem;
+            padding-bottom: 2rem;
+          }
+
+          .section-why-overflow{
+            padding-bottom: 20rem;
           }
 
           .section-why-text{
@@ -245,6 +308,50 @@ export default function Home() {
             color: #5DA4E0;
           }
 
+          .signup-form{
+            padding-right: 15%;
+            padding-left: 15%;
+          }
+
+          @media (max-width: 414px) {
+
+            .banner{
+              padding-top: 40% !important;
+              padding-bottom: 40% !important;
+            }
+
+            .community{
+              padding-left: 2%;
+              padding-right: 2%;
+            }
+
+            .community-header{
+              font-weight: 300;
+              font-size: 26px;
+              line-height: 2rem;
+              padding-top: 5%;
+              padding-bottom: 2%;
+            }
+
+            .footer{
+              padding-left: 2%;
+              padding-right: 2%;
+            }
+
+            .founder{
+              padding-left: 2%;
+              padding-right: 2%;
+            }
+            
+            .image{
+              position: relative;
+              margin-top: -450px;
+            }
+
+            .section-why-overflow{
+              padding-bottom: 13rem;
+            }
+          }
           
           
       `}

@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
+import * as Scroll from 'react-scroll';
+import { Link, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
-import { FiFacebook } from 'react-icons/fi';
-import { FaInstagram, FaGreaterThan } from 'react-icons/fa';
-import { AiOutlineMail } from 'react-icons/ai';
 
 
 
@@ -14,6 +12,10 @@ import Header from './Header';
 
 const Layout = props => {
     const [isLoading, setIsLoading] = useState(false);
+
+    const handleSetActive = function(to) {
+        console.log(to);
+    };
 
     return (
         <React.Fragment>
@@ -27,12 +29,23 @@ const Layout = props => {
 
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-                <link rel="icon" type="image/png" sizes="250x250" href="img/logo.png" />
-
-                <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="/img/favicon/favicon.ico" type="image/x-icon" />
-
-                <link rel="mask-icon" href="/img/favicon/safari-pinned-tab.html" color="#25237e" />
-                <meta name="msapplication-config" content="/img/favicon/browserconfig.xml" />
+                <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png" />
+                <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png" />
+                <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png" />
+                <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png" />
+                <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png" />
+                <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png" />
+                <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png" />
+                <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png" />
+                <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png" />
+                <link rel="icon" type="image/png" sizes="192x192" href="/img/favicon/android-icon-192x192.png" />
+                <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+                <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png" />
+                <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+                <link rel="manifest" href="/img/favicon/manifest.json" />
+                <meta name="msapplication-TileColor" content="#ffffff" />
+                <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png" />
+                <meta name="theme-color" content="#ffffff" />
                 <meta name="msapplication-TileColor" content="#4296E2" />
 
                 <meta property="og:image:height" content="300" />
@@ -54,24 +67,59 @@ const Layout = props => {
                 <meta name="msapplication-navbutton-color" content="#4296E2" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="#4296E2" />
             </Head>
-            <div className="header-nav d-flex flex-column flex-md-row align-items-center mb-1 shadow-sm">
-                <h5 className="my-0 mr-md-auto font-weight-normal">Clear<br /><span className="text-dark h6">wellness</span></h5>
-                <nav className="my-2 my-md-0 mr-md-3">
-                        <a className="p-2 d-none d-md-inline-block" href="#">Why clear</a>
-                        <a className="p-2 d-none d-md-inline-block" href="#">Community</a>
-                        <a className="p-2 d-none d-md-inline-block" href="#">Our team</a>
-                        <a className="p-2 d-none d-md-inline-block" href="#">Message</a>
-                        <a className="p-2 d-none d-md-inline-block" href="#">Connect</a>
-                </nav>
-            </div>
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container">
+                    <a className="navbar-brand" href="#">
+                        <img className="brand-logo" src="/img/logo.png" alt="" loading="lazy" />
+                    </a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+                        
+                        <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li className="nav-item active">
+                                <Link activeClass="nav-item" to="why" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                                    <a className="nav-link">Why clear <span className="sr-only">(current)</span></a>
+                                </Link>
+                            </li>
+
+                            <li className="nav-item">
+                                <Link activeClass="nav-item" to="community" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                                    <a className="nav-link">Community</a>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <Link activeClass="nav-item" to="team" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                                    <a className="nav-link"tabindex="-1" aria-disabled="true">Our team</a>
+                                </Link>
+                            </li>
+                            <li className="nav-item">
+                                <a className="nav-link" href="#" tabindex="-1" aria-disabled="true">Message</a>
+                            </li>
+                            <Link activeClass="nav-item" to="connect" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                                <li className="nav-item">
+                                    <a className="nav-link" tabindex="-1" aria-disabled="true">Connect</a>
+                                </li>
+                            </Link>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
             {props.children}
 
             <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+            <script src="/js/particles.js"></script>
             <style jsx global>{`
                 html {
                     font-size: 14px;
                     font-family: Maison Neue Extended;
+                }
+
+                .brand-logo{
+                    max-width: 10rem;
                 }
 
                 .header-nav{
