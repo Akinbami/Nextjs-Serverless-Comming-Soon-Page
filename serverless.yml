@@ -1,2 +1,4 @@
 comingSoonApp:
  component: "@sls-next/serverless-component"
+ inputs:
+   domain: ["clearwellness", "smartpysolutions.com"]

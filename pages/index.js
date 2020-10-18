@@ -3,9 +3,8 @@ import Layout from '../Components/Layout';
 import Management from '../Components/Management';
 
 
-import { FiFacebook } from 'react-icons/fi';
-import { FaInstagram, FaGreaterThan } from 'react-icons/fa';
-import { AiOutlineMail } from 'react-icons/ai';
+import { FaInstagram, FaFacebook, FaPhoneAlt } from 'react-icons/fa';
+import { GrMail } from "react-icons/gr";
 
 import {Element } from 'react-scroll';
 
@@ -17,10 +16,12 @@ import {Element } from 'react-scroll';
 export default function Home() {
   return (
     <Layout>
-      <div className="banner position-relative overflow-hidden p-3 p-md-5 text-center bg-primary">
+      <div>
         <div id="particles-js"></div>
-        <div className="col-md-5 p-lg-5 mx-auto my-5">
-          <h1 className="display-4 font-weight-normal text-light">Health isn’t a goal, its a way of living</h1>
+        <div className="banner position-relative overflow-hidden p-3 p-md-5 text-center bg-primary">
+          <div className="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 className="display-4 font-weight-normal text-light">Health isn’t a goal, its a way of living</h1>
+          </div>
         </div>
       </div>
 
@@ -39,14 +40,14 @@ export default function Home() {
             </div>
           </div>
           <div className="card">
-            <img src="/img/product.png" className="card-img-top" alt="..." />
+            <img src="/img/sweet.png" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Refresh / Sweet Flavoured</h5>
               <p className="card-text">Natural flavours, to refresh your entire system. An antioxidant filled with  several benefits including, weight loss, bone, brain and muscle health.</p>
             </div>
           </div>
           <div className="card">
-            <img src="/img/product.png" className="card-img-top" alt="..." />
+            <img src="/img/citrus.png" className="card-img-top" alt="..." />
             <div className="card-body">
               <h5 className="card-title">Renew / Citrus Flavoured</h5>
               <p className="card-text">Beautifying from the inside out. Loaded with Vitamin C, Citric acid, thiamin and various B Vitamins.  Improves skin quality, Increases energy and  improves diet.</p>
@@ -55,7 +56,7 @@ export default function Home() {
         </div>
       </div>
       <div className="brand-text px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <p className="lead mx-auto">We created to flavoured options for those who want to consume their recommended water intake but don't like to drink water. </p>
+        <p className="lead mx-auto">We created flavoured options for those who want to consume their recommended water intake but don't like to drink water. </p>
       </div>
 
         <div className="pricing-header px-3 pt-md-5 mx-auto text-center  section-why-overflow">
@@ -184,9 +185,11 @@ export default function Home() {
           <p className="h3 py-5 text-light">#ClearMakeitaLifestyle</p>
 
           <p className="py-3 text-light">
-            <span className="px-2"><FiFacebook size="2em" /></span>
+            <span className="px-2"><FaFacebook size="2em" /></span>
             <span className="px-2"><FaInstagram size="2em" /></span>
-            <span className="px-2"><AiOutlineMail size="2em" /></span>
+            <span className="px-2"><GrMail size="2em" /></span>
+            <span className="px-2"><FaPhoneAlt size="2em" /></span>
+
           </p>
 
           <p className="h5 text-light mx-auto">© Clear Wellness. All Rights Reserved.</p>
@@ -219,6 +222,10 @@ export default function Home() {
           canvas {
             display: block;
             vertical-align: bottom;
+          }
+
+          .card-text{
+            font-size: .9rem;
           }
 
 

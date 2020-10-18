@@ -1,0 +1,13 @@
+{
+  "region": "us-east-1",
+  "privateZone": false,
+  "domain": "smartpysolutions.com",
+  "subdomains": [
+    {
+      "domain": "clearwellness.smartpysolutions.com",
+      "distributionId": "E3HH8TZWYH924U",
+      "url": "https://d1c2lh2g711orq.cloudfront.net",
+      "type": "awsCloudFront"
+    }
+  ]
+}
