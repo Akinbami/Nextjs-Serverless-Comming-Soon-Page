@@ -3,13 +3,6 @@ import Head from 'next/head';
 import * as Scroll from 'react-scroll';
 import { Link, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
-
-
-
-
-import Header from './Header';
-
-
 const Layout = props => {
     const [isLoading, setIsLoading] = useState(false);
 
@@ -95,7 +88,9 @@ const Layout = props => {
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#" tabindex="-1" aria-disabled="true">Message</a>
+                                <Link activeClass="nav-item" to="founder" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
+                                    <a className="nav-link" tabindex="-1" aria-disabled="true">Message</a>
+                                </Link>
                             </li>
                             <Link activeClass="nav-item" to="connect" spy={true} smooth={true} offset={50} duration={500} onSetActive={handleSetActive}>
                                 <li className="nav-item">

@@ -16,12 +16,10 @@ import {Element } from 'react-scroll';
 export default function Home() {
   return (
     <Layout>
-      <div>
+      <div className="banner position-relative overflow-hidden p-3 p-md-5 text-center bg-primary">
         <div id="particles-js"></div>
-        <div className="banner position-relative overflow-hidden p-3 p-md-5 text-center bg-primary">
-          <div className="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 className="display-4 font-weight-normal text-light">Health isn’t a goal, its a way of living</h1>
-          </div>
+        <div className="col-md-5 p-lg-5 banner-content mx-auto">
+          <h1 className="display-4 font-weight-normal text-light">Health isn’t a goal, its a way of living</h1>
         </div>
       </div>
 
@@ -136,25 +134,27 @@ export default function Home() {
         </div>
       </Element>
 
-      <div className="founder">
-        <div className="row">
-          <div className="col-lg-5">
-            <img className="img-fluid" src="/img/founder.png" alt="..." />
-          </div>
-          <div className="col-lg-7">
-            <p className="community-header">Founders Message</p>
-            <p className="community-text">
-              I  was the most confident, sociable person, this all changed after I experienced severe health challenges.<br/>
-              One day I took a trip to Los Angeles and a friend introduced me to alkaline water, I was skeptical at first, simply because iI had spent thousand of pounds, I had booked consultations with experts in the UK, Nigeria, India and USA trying to understand the root cause of my illness.  <br/>
-              I began to drink alkaline water after deciding I literally had nothing to lose, and to my amazement Ii saw unbelievable results. <br />
-              I came back to Nigerian and searched for a company who share my values in terms of a reliable source of alkaline water, eco- friendly packaging and tasted great! I didn't find one so decided to create one.<br />
-              As my dad always said: “ If it Doesn't exist Create it”<br />
+      <Element name="founder" className="element">
+        <div className="founder">
+          <div className="row">
+            <div className="col-lg-5">
+              <img className="img-fluid" src="/img/founder.png" alt="..." />
+            </div>
+            <div className="col-lg-7">
+              <p className="community-header">Founders Message</p>
+              <p className="community-text">
+                I  was the most confident, sociable person, this all changed after I experienced severe health challenges.<br/>
+                One day I took a trip to Los Angeles and a friend introduced me to alkaline water, I was skeptical at first, simply because iI had spent thousand of pounds, I had booked consultations with experts in the UK, Nigeria, India and USA trying to understand the root cause of my illness.  <br/>
+                I began to drink alkaline water after deciding I literally had nothing to lose, and to my amazement Ii saw unbelievable results. <br />
+                I came back to Nigerian and searched for a company who share my values in terms of a reliable source of alkaline water, eco- friendly packaging and tasted great! I didn't find one so decided to create one.<br />
+                As my dad always said: “ If it Doesn't exist Create it”<br />
 
-              <p className="community-text my-3"><b>Welcome To Clear</b></p>
-            </p>
+                <p className="community-text my-3"><b>Welcome To Clear</b></p>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </Element>
 
       <Element name="team" className="element">
         <div className="section-why text-center py-5">
@@ -204,8 +204,12 @@ export default function Home() {
             -webkit-background-size: cover;
                 -moz-background-size: cover;
                     background-size: cover;
-            padding-top: 10% !important;
             padding-bottom: 10% !important;
+          }
+
+          .banner-content{
+            margin-top: 10%;
+            margin-bottom: 5%;
           }
 
           .bg-primary {
