@@ -1,6 +1,6 @@
 {
-  "name": "pbbvwnl-gcu2i1m",
-  "hash": "guxovF3MVJZzheJfNmreLy8lQYOqW/vl4ryUHi+pUAo=",
+  "name": "tthj8sm-l5ku4kg",
+  "hash": "j9bPBgjSWy4BdWZ1CwdrmBikh+uY56kWxPAdSzyWYgo=",
   "description": "API Lambda@Edge for Next CloudFront distribution",
   "memory": 512,
   "timeout": 10,
@@ -10,8 +10,8 @@
   "runtime": "nodejs12.x",
   "env": {},
   "role": {
-    "arn": "arn:aws:iam::698428087730:role/pbbvwnl-jomji5q"
+    "arn": "arn:aws:iam::698428087730:role/tthj8sm-hgzy6ok"
   },
-  "arn": "arn:aws:lambda:us-east-1:698428087730:function:pbbvwnl-gcu2i1m",
+  "arn": "arn:aws:lambda:us-east-1:698428087730:function:tthj8sm-l5ku4kg",
   "region": "us-east-1"
 }

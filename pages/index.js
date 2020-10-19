@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import Head from 'next/head'
 import Layout from '../Components/Layout';
 import Management from '../Components/Management';
@@ -14,6 +15,34 @@ import {Element } from 'react-scroll';
 
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
+
+  const handleChange = (value) => {
+    console.log("value ", value)
+    setContent(value);
+  }
+
+  const sendMail = () =>{
+    setIsLoading(true);
+    fetch('/api/join', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({email: email})
+    }).then((res) => {
+      console.log(res)
+      setIsLoading(false);
+      setEmail("");
+      // res.status === 200 ? setIsLoading(false) : ''
+    }).catch(err=>{
+      console.log(err)
+    });
+  };
+
   return (
     <Layout>
       <div className="banner position-relative overflow-hidden p-3 p-md-5 text-center bg-primary">
@@ -143,12 +172,13 @@ export default function Home() {
             <div className="col-lg-7">
               <p className="community-header">Founders Message</p>
               <p className="community-text">
-                I  was the most confident, sociable person, this all changed after I experienced severe health challenges.<br/>
-                One day I took a trip to Los Angeles and a friend introduced me to alkaline water, I was skeptical at first, simply because iI had spent thousand of pounds, I had booked consultations with experts in the UK, Nigeria, India and USA trying to understand the root cause of my illness.  <br/>
-                I began to drink alkaline water after deciding I literally had nothing to lose, and to my amazement Ii saw unbelievable results. <br />
-                I came back to Nigerian and searched for a company who share my values in terms of a reliable source of alkaline water, eco- friendly packaging and tasted great! I didn't find one so decided to create one.<br />
-                As my dad always said: “ If it Doesn't exist Create it”<br />
+                I was the most confident, friendly person; this all changed after I experienced severe health challenges.<br />
+                One day I took a trip to Los Angeles. A friend introduced me to alkaline water, but I was sceptical at first because I had spent thousands of pounds. I had booked consultations with experts in the UK, Nigeria, India and the USA trying to understand the root cause of my illness.<br />
+                I began to drink alkaline water after deciding I had nothing to lose. To my amazement, I saw unbelievable results instantly.<br />
+                I came back to Nigeria and searched for a company who shares my values in terms of a reliable source of alkaline water, eco- friendly packaging and tasted great! I didn't find one, so I decided to create one.<br />
+                As my dad always said: "If it doesn't exist, create it."<br /><br />
 
+                At Clear Wellness, we are passionate about bring out the Best Version of You.<br />
                 <p className="community-text my-3"><b>Welcome To Clear</b></p>
               </p>
             </div>
@@ -173,10 +203,16 @@ export default function Home() {
             <form className="form-row">
               <div className="col-sm-12 col-md-8 col-lg-9 mb-2">
                 <label for="email" className="sr-only">Email</label>
-                <input type="email" className="form-control form-control-lg" id="email" placeholder="Enter your email" />
+                <input type="email" className="form-control form-control-lg" id="email" onChange={e => setEmail(e.target.value)} placeholder="Enter your email" />
               </div>
               <div className="col-sm-12 col-md-4 col-lg-3 mb-2">
-                <button type="submit" className="btn btn-dark btn-lg w-100">Join Now</button>
+                {isLoading ? 
+                  <button className="btn btn-dark btn-lg w-100" type="button" disabled>
+                    <span className="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Loading...
+                  </button> : 
+                  <button type="button" onClick={sendMail} className="btn btn-dark btn-lg w-100">Join Now</button>
+                }
               </div>
             </form>
           </div>
@@ -185,10 +221,26 @@ export default function Home() {
           <p className="h3 py-5 text-light">#ClearMakeitaLifestyle</p>
 
           <p className="py-3 text-light">
-            <span className="px-2"><FaFacebook size="2em" /></span>
-            <span className="px-2"><FaInstagram size="2em" /></span>
-            <span className="px-2"><GrMail size="2em" /></span>
-            <span className="px-2"><FaPhoneAlt size="2em" /></span>
+            <span className="px-2">
+              <a target="_blank" href="https://www.facebook.com/Clear-Wellness-107537117791661?_rdc=1&_rdr">
+                <FaFacebook size="2em" />
+              </a>
+            </span>
+            <span className="px-2">
+              <a target="_blank" href="https://instagram.com/clearwellness1?igshid=d3hks0kz8sze">
+                <FaInstagram size="2em" />
+              </a>
+            </span>
+            <span className="px-2">
+              <a target="_blank" href="mailto:clearbetterforeveryone@gmail.com">
+                <GrMail size="2em" />
+              </a>
+            </span>
+            <span className="px-2">
+              <a target="_blank" href="tel:+2347056954711">
+                <FaPhoneAlt size="2em" />
+              </a>
+            </span>
 
           </p>
 
@@ -197,6 +249,10 @@ export default function Home() {
       </Element>
 
       <style jsx>{`
+          a, a:hover, a:focus, a:active {
+            text-decoration: none;
+            color: inherit;
+          }
           .banner{
             background-image: url("/img/footer-bg.png");
             background-repeat: no-repeat;

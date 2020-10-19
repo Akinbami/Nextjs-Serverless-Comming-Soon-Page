@@ -1,0 +1,13 @@
+{
+  "region": "us-east-1",
+  "privateZone": false,
+  "domain": "clearwellness.net",
+  "subdomains": [
+    {
+      "domain": "www.clearwellness.net",
+      "distributionId": "E177IR3HO87RF8",
+      "url": "https://d1kancsfy7k26u.cloudfront.net",
+      "type": "awsCloudFront"
+    }
+  ]
+}
