@@ -5,10 +5,8 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 const send = ({text }) => {
-    console.log("this is the api key", process.env.SENDGRID_API_KEY)
-    console.log("aws key", process.env.AWS_ACCESS_KEY_ID)
     const msg = {
-        to: 'clearbetterforeveryone@gmail.com', // Change to your recipient
+        to: 'Clearwellness.net@gmail.com', // Change to your recipient
         from: 'smartpy.info@gmail.com', // Change to your verified sender
         subject: 'CLEARWELLNESS SIGNUP',
         text: text,

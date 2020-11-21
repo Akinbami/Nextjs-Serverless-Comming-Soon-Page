@@ -4,7 +4,7 @@ import Layout from '../Components/Layout';
 import Management from '../Components/Management';
 
 
-import { FaInstagram, FaFacebook, FaPhoneAlt } from 'react-icons/fa';
+import { FaRegPlayCircle, FaInstagram, FaFacebook, FaPhoneAlt } from 'react-icons/fa';
 import { GrMail } from "react-icons/gr";
 
 import {Element } from 'react-scroll';
@@ -18,6 +18,8 @@ export default function Home() {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
 
   const handleChange = (value) => {
     console.log("value ", value)
@@ -26,17 +28,18 @@ export default function Home() {
 
   const sendMail = () =>{
     setIsLoading(true);
-    fetch('/api/join', {
+    fetch('https://73e4b3auea.execute-api.us-east-1.amazonaws.com/dev/api/send_email', {
       method: 'post',
       headers: {
         'Accept': 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({email: email})
+      body: JSON.stringify({ message: email, recipient: "Clearwellness.net@gmail.com", subject: 'CLEARWELLNESS SIGNUP' })
     }).then((res) => {
       console.log(res)
       setIsLoading(false);
       setEmail("");
+      setIsSubmitted(true);
       // res.status === 200 ? setIsLoading(false) : ''
     }).catch(err=>{
       console.log(err)
@@ -49,6 +52,9 @@ export default function Home() {
         <div id="particles-js"></div>
         <div className="col-md-5 p-lg-5 banner-content mx-auto">
           <h1 className="display-4 font-weight-normal text-light">Health isn’t a goal, its a way of living</h1>
+          <div className="jumbo-video text-center">
+            <a className="btn btn-light btn-lg" href="https://flutterwave.com/pay/clearwellness" target="_blank">PreOrder Now</a>
+          </div>
         </div>
       </div>
 
@@ -84,6 +90,7 @@ export default function Home() {
       </div>
       <div className="brand-text px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <p className="lead mx-auto">We created flavoured options for those who want to consume their recommended water intake but don't like to drink water. </p>
+        <a className="btn btn-primary btn-lg" href="https://flutterwave.com/pay/clearwellness" target="_blank">Pre Order Now</a>
       </div>
 
         <div className="pricing-header px-3 pt-md-5 mx-auto text-center  section-why-overflow">
@@ -96,11 +103,11 @@ export default function Home() {
       <Element name="community" className="element">
         <div className="section-why text-center">
           <div className="image">
-            <img className="img-fluid" src="/img/bigproduct.png" alt="..." />
+            <img className="img-fluid" src="/img/distorted.png" alt="..." />
           </div>
           <div className="row">
             <div className="col-lg-4">
-              <img src="/icons/icon1.png" className="rounded" alt="..." />
+              <img src="/icons/icon3.png" className="rounded" alt="..." />
               <p className="section-why-text py-2">Better for you.</p>
             </div>
             <div className="col-lg-4">
@@ -108,7 +115,7 @@ export default function Home() {
               <p className="section-why-text py-2">Eco-friendly packaging</p>
             </div>
             <div className="col-lg-4">
-              <img src="/icons/icon3.png" className="rounded" alt="..." />
+              <img src="/icons/icon1.png" className="rounded" alt="..." />
               <p className="section-why-text py-2">Clear Community</p>
             </div>
         </div>
@@ -120,7 +127,9 @@ export default function Home() {
         <div className="community-item">
           <div className="row">
             <div className="col-lg-6">
-              <img className="img-fluid" src="/img/community1.png" alt="..." />
+              <div className="community-bg-image">
+                <a className="btn btn-light btn-lg" href="https://flutterwave.com/pay/clearwellness" target="_blank">PreOrder Now</a>
+              </div>
             </div>
             <div className="col-lg-6">
               <p className="community-header">Clear Community</p>
@@ -139,7 +148,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-6">
               <p className="community-text pt-5">The Clear Community extends outside of its’ clients. Our philanthropic efforts have focused on improving the lives of people with little to no access to drinkable water.</p>
-              <p className="community-text">For more information kindly email <b>ClearBetterForEveryone@Gmail.com</b>
+              <p className="community-text">For more information kindly email <br /><b>ClearWellness.net@gmail.com</b>
               </p>
             </div>
             <div className="col-lg-6">
@@ -159,6 +168,9 @@ export default function Home() {
               Drinking clear, fresh, naturally alkaline artesian water is amazing for you. So is lessening our environmental impact. Clear’s mission is to do both at the same time.
               We are the best choice.
             </p>
+
+            <a className="btn btn-primary btn-lg text-light" href="https://flutterwave.com/pay/clearwellness" target="_blank">PreOrder Now</a>
+
           </div>
         </div>
       </Element>
@@ -167,7 +179,7 @@ export default function Home() {
         <div className="founder">
           <div className="row">
             <div className="col-lg-5">
-              <img className="img-fluid" src="/img/founder.png" alt="..." />
+              <img className="img-fluid" src="/img/fadekemi.jpeg" alt="..." />
             </div>
             <div className="col-lg-7">
               <p className="community-header">Founders Message</p>
@@ -182,6 +194,9 @@ export default function Home() {
                 <p className="community-text my-3"><b>Welcome To Clear</b></p>
               </p>
             </div>
+          </div>
+          <div className="text-center pt-4">
+            <a className="btn btn-primary btn-lg text-light" href="https://youtu.be/utDkFwarWn8" data-lity>Watch Now <FaRegPlayCircle size="1em" /></a>
           </div>
         </div>
       </Element>
@@ -214,6 +229,9 @@ export default function Home() {
                   <button type="button" onClick={sendMail} className="btn btn-dark btn-lg w-100">Join Now</button>
                 }
               </div>
+              {isSubmitted ? <div className="alert alert-success" role="alert">
+                Thanks for your application. We will get back to you shorty.
+            </div> : ""}
             </form>
           </div>
 
@@ -232,7 +250,7 @@ export default function Home() {
               </a>
             </span>
             <span className="px-2">
-              <a target="_blank" href="mailto:clearbetterforeveryone@gmail.com">
+              <a target="_blank" href="mailto:Clearwellness.net@gmail.com">
                 <GrMail size="2em" />
               </a>
             </span>
@@ -279,6 +297,11 @@ export default function Home() {
             font-size: 20px;
           }
 
+          .btn-primary{
+            background-color: #5da4e0;
+            color: white;
+          }
+
           canvas {
             display: block;
             vertical-align: bottom;
@@ -302,6 +325,15 @@ export default function Home() {
             padding-left: 15%;
             padding-right: 15%;
             padding-top: 5%
+          }
+
+          .community-bg-image{
+            background-image: url('/img/community1.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding-top: 55%;
+            padding-bottom: 10%;
           }
 
           .community-header{

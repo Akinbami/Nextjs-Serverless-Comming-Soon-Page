@@ -17,7 +17,7 @@ const Layout = props => {
 
                 <title>Clear Client - Coming Soon</title>
 
-                <meta name="keywords" content="Clear Client, Clear, Client" />
+                <meta name="keywords" content="Clear Wellness, Clear, Wellness" />
                 <meta name="author" content="SmartpySolutions" />
 
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -43,8 +43,8 @@ const Layout = props => {
 
                 <meta property="og:image:height" content="300" />
                 <meta property="og:image:width" content="573" />
-                <meta property="og:title" content="Clear Client Coming Soon Landing Page" />
-                <meta property="og:description" content="Clear Client Coming Soon Landing Page" />
+                <meta property="og:title" content="Clear Wellness Coming Soon Landing Page" />
+                <meta property="og:description" content="Clear Wellness Coming Soon Landing Page" />
                 <meta property="og:url" content="index.html" />
                 <meta property="og:image" content="" />
 
@@ -53,6 +53,10 @@ const Layout = props => {
                 <link rel="stylesheet" type="text/css" href="/css/plugins.css" />
                 <link rel="stylesheet" type="text/css" href="/css/loaders/loader.css" />
                 <script src="/particles.js-master/particles.js"></script>
+
+                <link href="/lity/dist/lity.css" rel="stylesheet" />
+                <script src="/lity/vendor/jquery.js"></script>
+                <script src="/lity/dist/lity.js"></script>
 
 
 
